@@ -60,3 +60,24 @@ Includes popular integrations with:
 - Uses `Yarn` as default package manager
 - Removes some obnoxious Markdown rules that are default
 
+## Deployment on Vercel
+
+### Default Deployment
+
+You can deploy the repo directly onto vercel by ingesting the repo once you fork / clone it.
+
+Simple use the default settings.
+
+### Deploying storybook on Vercel
+
+You can also deploy the storybook build using vercel by setting the following ovverides:
+
+1. Set framework to "other"
+2. Keep root directory at `./`
+3. Set `next build && build-storybook` as your override for the build command.
+4. Set `storybook-static` as the override for your output directory.
+
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://storybook.julianwan.com)
+
+[![Deployment Options](/public/admin/storybookDeploy.png)](https://storybook.julianwan.com)
+

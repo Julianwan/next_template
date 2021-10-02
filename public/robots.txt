@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://pubsafe.co
+Host: https://template.julianwan.com
 
 # Sitemaps
-Sitemap: https://pubsafe.co/sitemap.xml
+Sitemap: https://template.julianwan.com/sitemap.xml
