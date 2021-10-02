@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+	@apply bg-white dark:bg-gray-900 font-inter;
+
+	font-size: 100%;
+	overflow: hidden;
+}
+
+html,
+body {
+	@apply font-normal;
+
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen, Ubuntu, Cantarell, Fira Sans, sans-serif;
+	font-weight: 400;
+	height: 100%;
+
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	overflow: auto;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+svg {
+	fill: currentColor;
+}
+
+p {
+	a {
+		@apply dark:text-yellow-400 font-medium text-yellow-500;
+	}
+}
+p a:visited {
+	@apply text-yellow-600 dark:text-yellow-700;
+}
+
+p {
+	blockquote {
+		@apply text-base md:text-lg my-4 md:my-6 border-l-4 md:border-l-6 border-yellow-600 dark:border-yellow-400 bg-smoke dark:bg-slate p-4 md:p-6;
+	}
+}

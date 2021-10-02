@@ -1,0 +1,77 @@
+{
+    "[sql]": {
+        "editor.defaultFormatter": "mtxr.sqltools"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.format": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnType": false,
+    "editor.quickSuggestions": {
+        "comments": true,
+        "other": true,
+        "strings": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.workingDirectories": [
+        {
+            "changeProcessCWD": true,
+            "directory": "./admin"
+        },
+        {
+            "changeProcessCWD": true,
+            "directory": "./client"
+        },
+        {
+            "changeProcessCWD": true,
+            "directory": "./api"
+        }
+    ],
+    "javascript.format.semicolons": "remove",
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "markdownlint.config": {
+        "default": true,
+        "MD001": false,
+        "MD030": false,
+        "MD012":false,
+        "MD041": false,
+        "no-hard-tabs": false
+    },
+    "prettier.configPath": "prettier.config.js",
+    "prettier.eslintIntegration": true,
+    "prettier.insertPragma": false,
+    "prettier.jsxSingleQuote": true,
+    "prettier.requireConfig": true,
+    "prettier.stylelintIntegration": true,
+    "prettier.withNodeModules": true,
+    "scss.showErrors": false,
+    "scss.validate": false,
+    "scssFormatter.printWidth": 80,
+    "sortJSON.contextMenu": {
+        "sortJSON": true,
+        "sortJSONAlphaNum": true,
+        "sortJSONAlphaNumReverse": false,
+        "sortJSONKeyLength": false,
+        "sortJSONKeyLengthReverse": false,
+        "sortJSONReverse": false,
+        "sortJSONType": false,
+        "sortJSONTypeReverse": false,
+        "sortJSONValues": false,
+        "sortJSONValuesReverse": false
+    },
+    "stylelint.packageManager": "yarn",
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.experimental.showPixelValues": true,
+    "tailwindCSS.validate": true
+}
