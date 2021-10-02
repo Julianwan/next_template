@@ -1,17 +1,33 @@
 # My Preferred Next.js Starter Template
 
+I love starting new projects, so I've built this template primarily for myself. It should always include the latest (or near-latest) frameworks I use often to start new web based apps.
+
+#### Future Additions
+
+- [ ] Native codegen for graphql endpoints for typescript
+- [ ] Simple SWR hooks with caching
+- [ ] Native opengraph image implementation for sample posts
+
+I'll keep building this until I have something I can always use as a template, and start development ASAP with my favorite frameworks.
+
+**Feel free to request additions!**
+
 Preview: <https://template.julianwan.com>
+
 Storybook: <https://storybook.julianwan.com>
 
 ---
 
-Includes popular integrations with:
+### Includes popular integrations with
+
 
 - Prettier
 - Eslint (lots of rules, most set as warnings)
 - Stylelint (default rules with some quality of life fixes I like)
 - Storybook (for UX testing)
 - Typescript (Because what is true?)
+- Next JS 11
+
 
 ## Storybook
 
