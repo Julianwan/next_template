@@ -1,5 +1,10 @@
 # My Preferred Next.js Starter Template
 
+Preview: <https://template.julianwan.com>
+Storybook: <https://storybook.julianwan.com>
+
+---
+
 Includes popular integrations with:
 
 - Prettier

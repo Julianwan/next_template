@@ -62,7 +62,7 @@ LayoutStory.storyName = 'Sample Content'
 
 const H6Template: Story<ComponentProps<typeof H6>> = (args) => <H6 {...args} />
 
-const sampleText = 'Public Safety Corporation'
+const sampleText = 'Header'
 
 export const H1Story = H1Template.bind({})
 H1Story.storyName = 'H1'
