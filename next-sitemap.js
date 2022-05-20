@@ -7,5 +7,5 @@ module.exports = {
 
 	generateRobotsTxt: true,
 
-	siteUrl: 'https://template.julianwan.com',
-}
+	siteUrl: 'https://template.julianwan.com'
+};

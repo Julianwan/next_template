@@ -1,17 +1,18 @@
-/* eslint-disable no-undef */
-/* eslint-disable unicorn/prefer-module */
 module.exports = {
 	arrowParens: 'always',
+	bracketSameLine: false,
 	bracketSpacing: true,
 	embeddedLanguageFormatting: 'auto',
-	endOfLine: 'lf',
+	endOfLine: 'auto',
 	htmlWhitespaceSensitivity: 'strict',
 	insertPragma: false,
-	jsxBracketSameLine: false,
 	jsxSingleQuote: true,
 	printWidth: 80,
-	semi: false,
+	proseWrap: 'always',
+	quoteProps: 'consistent',
+	semi: true,
 	singleQuote: true,
 	tabWidth: 2,
-	useTabs: true,
-}
+	trailingComma: 'none',
+	useTabs: true
+};

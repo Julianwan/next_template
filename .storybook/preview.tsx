@@ -1,130 +1,122 @@
-import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { addDecorator } from '@storybook/react';
 import { themes } from '@storybook/theming';
-import * as NextImage from 'next/image';
+import React from 'react';
+import '@/styles/globals.scss';
 import Layout from './layout';
-import '../src/styles/globals.scss';
+import './storybook.scss';
+import { RouterContext } from 'next/dist/shared/lib/router-context'; // next 12
 
-
+import * as NextImage from 'next/image';
 
 const OriginalNextImage = NextImage.default;
 Object.defineProperty(NextImage, 'default', {
 	configurable: true,
-	value: (props) => <OriginalNextImage {...props} unoptimized />,
+	value: (props) => <OriginalNextImage {...props} unoptimized />
 });
 
-addDecorator((storyFn) => <div style={{ textAlign: 'left' }}>{storyFn()}</div>);
-
 const customViewports = {
-	iphone5: {
-		name: 'iPhone 5',
-		styles: {
-			height: '568px',
-			width: '320px',
-		},
-		type: 'mobile',
-	},
-	iphone6: {
-		name: 'iPhone 6',
-		styles: {
-			height: '667px',
-			width: '375px',
-		},
-		type: 'mobile',
-	},
-
-	iphone8p: {
-		name: 'iPhone 8 Plus',
-		styles: {
-			height: '736px',
-			width: '414px',
-		},
-		type: 'mobile',
-	},
-	iphonex: {
-		name: 'iPhone X',
+	iphone13mini: {
+		name: 'iPhone 13 Mini (xs)',
 		styles: {
 			height: '812px',
-			width: '375px',
+			width: '375px'
 		},
-		type: 'mobile',
+		type: 'mobile'
+	},
+	iphone13promax: {
+		name: 'iPhone 13 Pro Max (sm)',
+		styles: {
+			height: '926px',
+			width: '428px'
+		},
+		type: 'mobile'
 	},
 
-	iphonexsmax: {
-		name: 'iPhone XS Max',
-		styles: {
-			height: '896px',
-			width: '414px',
-		},
-		type: 'mobile',
-	},
-	ipad: {
-		name: 'iPad',
+	ipadmini: {
+		name: 'iPad Mini (md)',
 		styles: {
 			height: '1024px',
-			width: '768px',
+			width: '768px'
 		},
-		type: 'tablet',
-	},
-	ipad10p: {
-		name: 'iPad Pro 10.5-in',
-		styles: {
-			height: '1112px',
-			width: '834px',
-		},
-		type: 'tablet',
+		type: 'tablet'
 	},
 	ipad12p: {
-		name: 'iPad Pro 12.9-in',
+		name: 'iPad Pro 12.9-in (lg)',
 		styles: {
 			height: '1366px',
-			width: '1024px',
+			width: '1024px'
 		},
-		type: 'tablet',
+		type: 'tablet'
 	},
-	pixel: {
-		name: 'Pixel',
+	imac: {
+		name: 'iMac (xl)',
 		styles: {
-			height: '960px',
-			width: '540px',
+			height: '720px',
+			width: '1280px'
 		},
-		type: 'mobile',
+		type: 'desktop'
 	},
-	pixelxl: {
-		name: 'Pixel XL',
+	macbookppro: {
+		name: 'Macbook Pro (2xl)',
 		styles: {
-			height: '1280px',
-			width: '720px',
+			height: '900px',
+			width: '1440px'
 		},
-		type: 'mobile',
+		type: 'desktop'
 	},
+	desktopmonitor: {
+		name: 'Desktop Monitor (3xl)',
+		styles: {
+			height: '1080px',
+			width: '1920px'
+		},
+		type: 'desktop'
+	}
 };
 
 export const parameters = {
-	viewport: { viewports: { ...MINIMAL_VIEWPORTS, ...customViewports } },
+	nextRouter: {
+		Provider: RouterContext.Provider
+	},
+	viewport: { viewports: { ...customViewports } },
 	backgrounds: { disable: true },
 	actions: { argTypesRegex: '^on[A-Z].*' },
-	fullscreen: 'false',
+	fullscreen: 'true',
+	options: {
+		storySort: {
+			order: [
+				'Atoms',
+				'Elements',
+				'Molecules',
+				'Headers',
+				'Features',
+				'Sections',
+				'Layouts',
+				'Pages',
+				'Content',
+				'*',
+				'WIP'
+			]
+		}
+	},
 	darkMode: {
+		styledPreview: true,
 		current: 'dark',
-		lightClass: 'light',
+		classTarget: 'html',
 		darkClass: 'dark',
 		light: {
-			brandTitle: '<small>Template Von Julian</small>',
-			brandUrl: 'https://www.julianwan.com',
-		/* 	brandImage: noneYet */
 			...themes.light,
 			appBg: '#DDDDDD',
-			appContentBg: '#DDDDDD',
+
+			brandTitle: 'Julian Wan',
+			appContentBg: '#F5F5F5',
 			appBorderColor: 'transparent',
-			appBorderRadius: 2,
-			stylePreview: true,
+			appBorderRadius: 5,
 
 			// Typography
 			fontBase:
-				'"Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,  "Helvetica Neue", Arial, sans-serif',
+				'"SF Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,  "Helvetica Neue", Arial, sans-serif',
 			fontCode:
-				'"Inter", ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace',
+				'"SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace',
 
 			// Text colors
 			textColor: '#111111',
@@ -139,27 +131,23 @@ export const parameters = {
 			inputBg: '#E0E0E0',
 			inputBorder: '#a5a5a5',
 			inputTextColor: '#000000',
-			inputBorderRadius: 2,
+			inputBorderRadius: 5
 		},
-
 		dark: {
 			...themes.dark,
-		brandTitle: '<small>Template Von Julian</small>',
-			brandUrl: 'https://www.julianwan.com',
-	/* 		brandImage: 		noneYet */
-			// UI
-			appBg: '#111111',
-			appContentBg: '#111111',
+			appBg: '#000000',
+			brandTitle: 'Julian Wan',
+			brandUrl: 'https://ux.julianwan.com',
 
+			appContentBg: '#0E0E0E',
 			appBorderColor: 'transparent',
-			appBorderRadius: 2,
-			stylePreview: true,
+			appBorderRadius: 5,
 
 			// Typography
 			fontBase:
-				'"Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,  "Helvetica Neue", Arial, sans-serif',
+				'"SF Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,  "Helvetica Neue", Arial, sans-serif',
 			fontCode:
-				'"Inter", ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace',
+				'"SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace',
 
 			// Text colors
 			textColor: '#DDDDDD',
@@ -174,9 +162,9 @@ export const parameters = {
 			inputBg: '#0E0E0E',
 			inputBorder: '#ffffff',
 			inputTextColor: '#ffffff',
-			inputBorderRadius: 2,
-		},
-	},
+			inputBorderRadius: 5
+		}
+	}
 };
 
 export default function Preview(children) {

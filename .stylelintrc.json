@@ -1,20 +1,7 @@
 {
-	"plugins": ["stylelint-prettier"],
 	"extends": ["stylelint-config-sass-guidelines", "stylelint-config-prettier"],
+	"plugins": ["stylelint-prettier"],
 	"rules": {
-		"value-list-max-empty-lines": 2,
-		"property-no-unknown": null,
-		"selector-max-id": null,
-		"selector-class-pattern": null,
-		"prettier/prettier": null,
-		"selector-pseudo-element-no-unknown": null,
-		"selector-no-qualifying-type": null,
-		"color-named": "always-where-possible",
-		"block-no-empty": null,
-		"comment-empty-line-before": null,
-		"declaration-block-trailing-semicolon": null,
-		"no-descending-specificity": null,
-		"scss/at-import-partial-extension-blacklist": null,
 		"at-rule-no-unknown": [
 			true,
 			{
@@ -28,6 +15,19 @@
 					"screen"
 				]
 			}
-		]
+		],
+		"block-no-empty": null,
+		"color-named": "always-where-possible",
+		"comment-empty-line-before": null,
+		"declaration-block-trailing-semicolon": null,
+		"no-descending-specificity": null,
+		"prettier/prettier": null,
+		"property-no-unknown": null,
+		"scss/at-import-partial-extension-blacklist": null,
+		"selector-class-pattern": null,
+		"selector-max-id": null,
+		"selector-no-qualifying-type": null,
+		"selector-pseudo-element-no-unknown": null,
+		"value-list-max-empty-lines": 2
 	}
 }

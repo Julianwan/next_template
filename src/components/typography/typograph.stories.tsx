@@ -1,25 +1,24 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import type { Meta, Story } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
-import { Blockquote,H1, H2, H3, H4, H5, H6, Paragraph } from './index'
+import { Blockquote, H1, H2, H3, H4, H5, H6, Paragraph } from '.';
 
 export default {
-	title: 'Typography/Headers',
-} as Meta
+	title: 'Typography/Headers'
+} as Meta;
 
-const H1Template: Story<ComponentProps<typeof H1>> = (args) => <H1 {...args} />
+const H1Template: Story<ComponentProps<typeof H1>> = (args) => <H1 {...args} />;
 
-const H2Template: Story<ComponentProps<typeof H2>> = (args) => <H2 {...args} />
+const H2Template: Story<ComponentProps<typeof H2>> = (args) => <H2 {...args} />;
 
-const H3Template: Story<ComponentProps<typeof H3>> = (args) => <H3 {...args} />
+const H3Template: Story<ComponentProps<typeof H3>> = (args) => <H3 {...args} />;
 
-const H4Template: Story<ComponentProps<typeof H4>> = (args) => <H4 {...args} />
+const H4Template: Story<ComponentProps<typeof H4>> = (args) => <H4 {...args} />;
 
-const H5Template: Story<ComponentProps<typeof H5>> = (args) => <H5 {...args} />
+const H5Template: Story<ComponentProps<typeof H5>> = (args) => <H5 {...args} />;
 
 const LayoutTemplate: Story = () => (
 	<div className='p-4 bg-white border dark:bg-black lg:p-8'>
-
 		<H1>Header 1</H1>
 
 		<Paragraph>
@@ -29,9 +28,7 @@ const LayoutTemplate: Story = () => (
 			thing to see in the wild actually. People all fighting over their own
 			private islands...
 		</Paragraph>
-		<Blockquote>
-		Oh well! In the end it didn&#39;t matter at all
-		</Blockquote>
+		<Blockquote>Oh well! In the end it didn&#39;t matter at all</Blockquote>
 		<Paragraph soft>
 			I&#39;m baby heirloom four dollar toast enamel pin cred try-hard.
 			Gluten-free meggings bitters coloring book, trust fund freegan la croix
@@ -54,48 +51,48 @@ const LayoutTemplate: Story = () => (
 			</a>
 		</Paragraph>
 	</div>
-)
+);
 
-export const LayoutStory = LayoutTemplate.bind({})
+export const LayoutStory = LayoutTemplate.bind({});
 
-LayoutStory.storyName = 'Sample Content'
+LayoutStory.storyName = 'Sample Content';
 
-const H6Template: Story<ComponentProps<typeof H6>> = (args) => <H6 {...args} />
+const H6Template: Story<ComponentProps<typeof H6>> = (args) => <H6 {...args} />;
 
-const sampleText = 'Header'
+const sampleText = 'Header';
 
-export const H1Story = H1Template.bind({})
-H1Story.storyName = 'H1'
+export const H1Story = H1Template.bind({});
+H1Story.storyName = 'H1';
 H1Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};
 
-export const H2Story = H2Template.bind({})
-H2Story.storyName = 'H2'
+export const H2Story = H2Template.bind({});
+H2Story.storyName = 'H2';
 H2Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};
 
-export const H3Story = H3Template.bind({})
-H3Story.storyName = 'H3'
+export const H3Story = H3Template.bind({});
+H3Story.storyName = 'H3';
 H3Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};
 
-export const H4Story = H4Template.bind({})
-H4Story.storyName = 'H4'
+export const H4Story = H4Template.bind({});
+H4Story.storyName = 'H4';
 H4Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};
 
-export const H5Story = H5Template.bind({})
-H5Story.storyName = 'H5'
+export const H5Story = H5Template.bind({});
+H5Story.storyName = 'H5';
 H5Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};
 
-export const H6Story = H6Template.bind({})
-H6Story.storyName = 'H6'
+export const H6Story = H6Template.bind({});
+H6Story.storyName = 'H6';
 H6Story.args = {
-	children: sampleText,
-}
+	children: sampleText
+};

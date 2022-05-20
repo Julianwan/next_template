@@ -1,10 +1,10 @@
-import { Meta, Story } from '@storybook/react'
+import type { Meta, Story } from '@storybook/react';
 
-import { Blockquote, Caption, H1, H2, H3, H4, H5, H6, Paragraph } from './index'
+import { Blockquote, Caption, H1, H2, H3, H4, H5, H6, Paragraph } from '.';
 
 export default {
-	title: 'Typography',
-} as Meta
+	title: 'Typography'
+} as Meta;
 
 const ElementsTemplate: Story = () => (
 	<div className='p-4 bg-white border dark:bg-black lg:p-8'>
@@ -17,15 +17,13 @@ const ElementsTemplate: Story = () => (
 		<Caption>H2</Caption>
 		<H3>Header 3</H3>
 		<Caption>H3</Caption>
-
 		<H4>Header 4</H4>
 		<Caption>H4</Caption>
 		<H5>Header 5</H5>
 		<Caption>H5</Caption>
 		<H6>Header 6</H6>
 		<Caption>H6</Caption>
-
-    <div className='pl-2 mt-8 mb-4 border-b-4 rounded-t-xl border-amber-600 dark:border-amber-400 bg-smoke dark:bg-slate'>
+		<div className='pl-2 mt-8 mb-4 border-b-4 rounded-t-xl border-amber-600 dark:border-amber-400 bg-smoke dark:bg-slate'>
 			<H6 className='pt-6 pb-2 my-2 leading-normal opacity-80'>Paragraphs</H6>
 		</div>
 		<Paragraph>
@@ -35,24 +33,21 @@ const ElementsTemplate: Story = () => (
 			wild actually. People all fighting over their own private islands...
 		</Paragraph>
 		<Caption>Paragraph</Caption>
-
- 
 		<Paragraph soft>
 			I&#39;m baby heirloom four dollar toast enamel pin cred try-hard.
 			Gluten-free meggings bitters coloring book, trust fund freegan la croix
 			pickled chia organic. Pinterest health goth green juice vape iPhone,
 			fashion axe irony 90&#39;s mlkshk tbh enamel pin vice offal biodiesel.
-		</Paragraph>   <Caption>Low-Contrast Paragraph</Caption>
-	
+		</Paragraph>{' '}
+		<Caption>Low-Contrast Paragraph</Caption>
 		<Paragraph soft small>
 			I&#39;m baby heirloom four dollar toast enamel pin cred try-hard.
 			Gluten-free meggings bitters coloring book, trust fund freegan la croix
 			pickled chia organic. Pinterest health goth green juice vape iPhone,
 			fashion axe irony 90&#39;s mlkshk tbh enamel pin vice offal biodiesel.
 		</Paragraph>
-    <Caption>Small Low-Contrast Paragraph</Caption>
-
-    <div className='pl-2 mt-8 mb-4 border-b-4 rounded-t-xl border-amber-600 dark:border-amber-400 bg-smoke dark:bg-slate'>
+		<Caption>Small Low-Contrast Paragraph</Caption>
+		<div className='pl-2 mt-8 mb-4 border-b-4 rounded-t-xl border-amber-600 dark:border-amber-400 bg-smoke dark:bg-slate'>
 			<H6 className='pt-6 pb-2 my-2 leading-normal opacity-80'>Quotes</H6>
 		</div>
 		<Caption>Blockquote</Caption>
@@ -65,7 +60,6 @@ const ElementsTemplate: Story = () => (
 		<Blockquote source sourceName='CDC Official Report'>
 			It’s all safe and effective!
 		</Blockquote>
-		
 		<H2>It doesn&#39;t have to be like this</H2>
 		<Paragraph>
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -82,8 +76,8 @@ const ElementsTemplate: Story = () => (
 			</a>
 		</Paragraph>
 	</div>
-)
+);
 
-export const LayoutStory = ElementsTemplate.bind({})
+export const LayoutStory = ElementsTemplate.bind({});
 
-LayoutStory.storyName = 'Elements'
+LayoutStory.storyName = 'Elements';
