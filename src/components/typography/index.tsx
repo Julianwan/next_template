@@ -3,7 +3,7 @@ export {
 	Blockquote as Blockquote,
 	Caption as Caption,
 	Paragraph as Paragraph
-} from './copy';
+} from '@/components/typography/copy';
 // Headers
 export {
 	H1 as H1,
@@ -12,4 +12,4 @@ export {
 	H4 as H4,
 	H5 as H5,
 	H6 as H6
-} from './headers';
+} from '@/components/typography/headers';

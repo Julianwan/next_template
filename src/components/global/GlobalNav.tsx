@@ -21,6 +21,7 @@ import {
 	ViewGridIcon,
 	XIcon
 } from '@heroicons/react/solid';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -101,14 +102,19 @@ export default function GlobalNav(): JSX.Element {
 			<div className='relative z-20'>
 				<div className='flex items-center justify-between px-4 py-5 mx-auto max-w-7xl sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10'>
 					<div>
-						<a href='#' className='flex'>
-							<span className='sr-only'>Workflow</span>
-							<img
-								className='w-auto h-8 sm:h-10'
-								src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
-								alt=''
-							/>
-						</a>
+						<Link href='/' passHref>
+							<button className='flex'>
+								<span className='sr-only'>Workflow</span>
+								<div className='relative w-auto h-8 sm:h-10'>
+									<Image
+										src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
+										alt=''
+										width={32}
+										height={32}
+									/>
+								</div>
+							</button>
+						</Link>
 					</div>
 					<div className='-my-2 -mr-2 md:hidden'>
 						<Popover.Button className='inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500'>
@@ -210,12 +216,11 @@ export default function GlobalNav(): JSX.Element {
 									Pricing
 								</button>
 							</Link>
-							<a
-								href='#'
-								className='text-base font-medium text-gray-500 hover:text-gray-900'
-							>
-								Docs
-							</a>
+							<Link href='#' passHref>
+								<button className='text-base font-medium text-gray-500 hover:text-gray-900'>
+									Docs
+								</button>
+							</Link>
 							<Popover>
 								{({ open }): JSX.Element => (
 									<>
@@ -308,11 +313,16 @@ export default function GlobalNav(): JSX.Element {
 																			className='flex p-3 -m-3 rounded-lg hover:bg-gray-100'
 																		>
 																			<div className='hidden shrink-0 sm:block'>
-																				<img
-																					className='object-cover w-32 h-20 rounded-md'
-																					src={post.imageUrl}
-																					alt=''
-																				/>
+																				<div className='relative'>
+																					{/* TODO: FIX THIS */}
+																					<Image
+																						className='object-cover w-32 h-20 rounded-md'
+																						src={post.imageUrl}
+																						alt=''
+																						width={128}
+																						height={80}
+																					/>
+																				</div>
 																			</div>
 																			<div className='flex-1 w-0 sm:ml-8'>
 																				<h4 className='text-base font-medium text-gray-900 truncate'>
@@ -328,14 +338,13 @@ export default function GlobalNav(): JSX.Element {
 															</ul>
 														</div>
 														<div className='mt-6 text-sm font-medium'>
-															<a
-																href='#'
-																className='text-amber-600 hover:text-amber-500'
-															>
-																{' '}
-																View all posts{' '}
-																<span aria-hidden='true'>&rarr;</span>
-															</a>
+															<Link href='#' passHref>
+																<button className='text-amber-600 hover:text-amber-500'>
+																	{' '}
+																	View all posts{' '}
+																	<span aria-hidden='true'>&rarr;</span>
+																</button>
+															</Link>
 														</div>
 													</div>
 												</div>
@@ -377,11 +386,11 @@ export default function GlobalNav(): JSX.Element {
 					<div className='bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black/5 divide-gray-50'>
 						<div className='px-5 pt-5 pb-6 sm:pb-8'>
 							<div className='flex items-center justify-between'>
-								<div>
-									<img
-										className='w-auto h-8'
+								<div className='relative w-8 h-8'>
+									<Image
 										src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
 										alt='Workflow'
+										layout='fill'
 									/>
 								</div>
 								<div className='-mr-2'>
@@ -410,13 +419,12 @@ export default function GlobalNav(): JSX.Element {
 										))}
 									</div>
 									<div className='mt-8 text-base'>
-										<a
-											href='#'
-											className='font-medium text-amber-600 hover:text-amber-500'
-										>
-											{' '}
-											View all products <span aria-hidden='true'>&rarr;</span>
-										</a>
+										<Link href='#' passHref>
+											<span className='font-medium text-amber-600 hover:text-amber-500'>
+												{' '}
+												View all products <span aria-hidden='true'>&rarr;</span>
+											</span>
+										</Link>
 									</div>
 								</nav>
 							</div>
@@ -444,29 +452,22 @@ export default function GlobalNav(): JSX.Element {
 									</button>
 								</Link>
 								<Link href='#' passHref>
-									<a
-										href='#'
-										className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'
-									>
+									<button className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
 										Blog
-									</a>
+									</button>
 								</Link>
 								<Link href='#' passHref>
-									<a
-										href='#'
-										className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'
-									>
+									<button className='text-base font-medium text-gray-900 rounded-md hover:text-gray-700'>
 										Contact Sales
-									</a>
+									</button>
 								</Link>
 							</div>
 							<div className='mt-6'>
-								<a
-									href='#'
-									className='flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-amber-600 hover:bg-amber-700'
-								>
-									Sign up
-								</a>
+								<Link href='#' passHref>
+									<button className='flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-amber-600 hover:bg-amber-700'>
+										Sign up
+									</button>
+								</Link>
 								<p className='mt-6 text-base font-medium text-center text-gray-500'>
 									Existing customer?{' '}
 									<Link href='#' passHref>

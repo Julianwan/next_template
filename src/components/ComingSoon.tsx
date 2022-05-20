@@ -1,4 +1,4 @@
-import { H2 } from './typography';
+import { H2 } from '@/components/typography';
 
 interface Props {
 	headline: string;
